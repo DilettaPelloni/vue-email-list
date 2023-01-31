@@ -11,13 +11,32 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
 
-        <title>Vue Boolzapp</title>
+        <title>Vue Email List</title>
     </head>
     <body>
         <div id="app">
-            {{ message }}
+            <header>
+                <div class="container">
+                    <h1>Vue Email List</h1>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="title">
+                        <h2>Ecco 10 indirizzi e-mail generati casualmente</h2>
+                        <p>Fanne buon uso!</p>
+                    </div>
+                    <ul>
+                        <li v-for="mail in emails">
+                            {{mail}}
+                        </li>
+                    </ul>
+                </div>
+            </main>
+
         </div>
         <!-- JS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="js/scripts.js"></script>
     </body>
